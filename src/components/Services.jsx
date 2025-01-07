@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { check, service1, service2, service3 } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "./Generating";
@@ -11,6 +12,8 @@ import {
 } from "./design/Services";
 
 const Services = () => {
+  const [activeIndex, setActiveIndex] = useState(2);
+
   return (
     <Section id="how-to-use">
       <div className="container">
@@ -87,18 +90,18 @@ const Services = () => {
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
                       key={index}
+                      onMouseEnter={() => setActiveIndex(index)}
                       className={`rounded-2xl flex items-center justify-center ${
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
+                        activeIndex === index
+                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem] cursor-pointer"
                           : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
                       }`}
                     >
                       <div
-                        className={
-                          index === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                            : ""
+                        className={`flex items-center justify-center w-full h-full rounded-[1rem] ${
+                          activeIndex === index ? "bg-n-7" : ""
                         }
+                        `}
                       >
                         <img src={item} width={24} height={24} alt={item} />
                       </div>
