@@ -1,6 +1,6 @@
-# Neural Talks
+# Neural Talk
 
-Neural Talks is a sleek and modern AI ChatApp UI built with **React** and **Vite**, designed for seamless performance and efficient development. This project focuses on frontend design, with significant emphasis on **CSS styling** and responsiveness.
+Neural Talk is a sleek and modern AI ChatApp UI built with **React** and **Vite**, designed for seamless performance and efficient development. This project focuses on frontend design, with significant emphasis on **CSS styling** and responsiveness.
 
 ## Live Demo
 
